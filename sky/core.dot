@@ -1,0 +1,29 @@
+digraph G {
+    graph [rankdir=TB];
+    subgraph cluster_G {
+
+        graph [style="filled,rounded",fillcolor="#80808018", label=""];
+        core [label="core", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0"];
+        core___start [label="_start", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0"];
+        core___stop_not_supported_message [label="_stop_not_supported_message", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0"];
+        core__autostop [label="autostop", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0"];
+        core__cancel [label="cancel", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0"];
+        core__cost_report [label="cost_report", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0"];
+        core__down [label="down", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0"];
+        core__download_logs [label="download_logs", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0"];
+        core__endpoints [label="endpoints", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0"];
+        core__job_status [label="job_status", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0"];
+        core__queue [label="queue", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0"];
+        core__start [label="start", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0"];
+        core__status [label="status", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0"];
+        core__stop [label="stop", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0"];
+        core__storage_delete [label="storage_delete", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0"];
+        core__storage_ls [label="storage_ls", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0"];
+        core__tail_logs [label="tail_logs", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0"];
+        core__cost_report__get_total_cost [label="get_total_cost", style="filled", fillcolor="#ffffffb2", fontcolor="#000000", group="0"];
+    }
+        core__cost_report -> core__cost_report__get_total_cost [style="solid", color="#000000"];
+        core__start -> core___start [style="solid", color="#000000"];
+        core__stop -> core___stop_not_supported_message [style="solid", color="#000000"];
+        core__autostop -> core___stop_not_supported_message [style="solid", color="#000000"];
+    }
